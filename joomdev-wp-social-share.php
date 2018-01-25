@@ -168,11 +168,45 @@ function joomdev_wss_register_menu_page_callback(){
     						</td>
     					</tr>
     					<tr>
-    						<th>Default Tags</th>
-    						<td>
-    							<input type="text" name="joomdev_wss_options[default_tags]" class="regular-text">
+                            <th>Default Tags</th>
+                            <td>
+                                <input type="text" name="joomdev_wss_options[default_tags]" class="regular-text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Buttons Format</th>
+                            <td>
+                                <select name="joomdev_wss_options[buttons_format]">
+                                    <option value="text_and_icons">Text and Icons</option>
+                                    <option value="icon_only">Text Only</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Button Shape</th>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Button Animation</th>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Show Share Count</th>
+                            <td>
+                                <input type="hidden" name="joomdev_wss_options[show_share_count]" value="no">
+                                <input type="checkbox" name="joomdev_wss_options[show_share_count]" value="yes">
     						</td>
     					</tr>
+                        <tr>
+                            <th>Share Incentive</th>
+                            <td>
+                                <input type="text" name="joomdev_wss_options[share_incentive]" class="regular-text">
+                            </td>
+                        </tr>
     				</tbody>
     			</table>
     			<?php submit_button(); ?>

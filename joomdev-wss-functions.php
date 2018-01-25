@@ -16,6 +16,12 @@ function get_joomdev_wss_options(){
 				'show_share_count' => 'no',
 				'share_incentive' => '',
 			);
+
+	global $JoomDev_wss_options;
+	$options = get_option('joomdev_wss_options', array());
+
+	$JoomDev_wss_options = shortcode_atts($default, $options);
+	return $JoomDev_wss_options;
 }
 
 function get_joomdev_wss_networks(){
