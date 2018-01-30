@@ -1,4 +1,8 @@
-<?php 
+<?php
+function get_joomdev_wss_plugin_info(){
+	return get_plugin_data(JOOMDEV_WSS_PLUGIN_FILE, false);
+}
+
 function get_joomdev_wss_options(){
 	$default = array(
 				'networks' => array(),

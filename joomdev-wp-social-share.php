@@ -8,18 +8,20 @@
 	Author URI: https://joomdev.com
 */
 
-
 global $JoomDev_wss_options;
 $JoomDev_wss_options = array();
+
+// define('JOOMDEV_WSS_PLUGIN_FILE', 'joomdev-wp-social-share/joomdev-wp-social-share.php');
+define('JOOMDEV_WSS_PLUGIN_FILE', __FILE__);
 
 include 'joomdev-wss-functions.php';
 
 // include script fies.
 add_action('admin_enqueue_scripts', 'joomdev_wss_admin_enqueue_scripts', 999);
 function joomdev_wss_admin_enqueue_scripts(){
-	wp_enqueue_style('joomdev-wss-font-awesome', plugins_url('css/font-awesome.min.css', __FILE__));
-	wp_enqueue_style('joomdev-wss-styles', plugins_url('css/styles.css', __FILE__));
-	wp_enqueue_script('joomdev-wss-scripts', plugins_url('js/scripts.js', __FILE__));
+	wp_enqueue_style('joomdev-wss-font-awesome', plugins_url('assets/css/font-awesome.min.css', __FILE__));
+	wp_enqueue_style('joomdev-wss-styles', plugins_url('assets/css/styles.css', __FILE__));
+	wp_enqueue_script('joomdev-wss-scripts', plugins_url('assets/js/scripts.js', __FILE__));
 }
 
 add_action( 'admin_menu', 'joomdev_wss_register_menu_page' );
@@ -39,19 +41,20 @@ function joomdev_wss_register_setting() {
 }
 
 function joomdev_wss_register_menu_page_callback(){
+    $plugin_data = get_joomdev_wss_plugin_info();
 	?>
-		<div class="wrap">
-			<h2>WP Social Share Settings</h2>
-			<?php 
-    			if($_GET['settings-updated']){
-					?>
-						<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
-							<p><strong>Settings saved.</strong></p>
-							<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
-						</div>
-					<?php 
-				}
-    		?>
+        <div class="wrap">
+            <h2></h2>
+            <?php 
+                if($_GET['settings-updated']){
+                    ?>
+                        <div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible"> 
+                            <p><strong>Settings saved.</strong></p>
+                            <button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
+                        </div>
+                    <?php 
+                }
+            ?>
 
     		<form method="post" action="options.php">
     			<?php 
@@ -59,48 +62,89 @@ function joomdev_wss_register_menu_page_callback(){
     				// $joomdev_wss_options = get_option('joomdev_wss_options', array());
     				$joomdev_wss_options = get_joomdev_wss_options();
     			?>
+                <div class="joomdev-wss-options-box">
+                    <div class="joomdev-wss-options-box-sidebar">
+                        <div class="joomdev-wss-options-box-logo">
+                            <a href="<?php echo $plugin_data['AuthorURI']; ?>" target="_BLANK"><h2><big><strong><?php echo $plugin_data['Author']; ?></strong></big></h2></a>
+                            <a href="<?php echo $plugin_data['PluginURI']; ?>" target="_BLANK"><h3><small><?php echo $plugin_data['Name']; ?> : <i><?php echo $plugin_data['Version']; ?></i></small></h3></a>
+                        </div>
+                        <div class="joomdev-wss-options-box-menubar">
+                            <ul>
+                                <li class="active">
+                                    <a href="javascript:;">
+                                        <i class="fa fa-bars"></i> General Settings
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="joomdev-wss-options-box-main">
+                        <div class="joomdev-wss-options-box-actions-header">
+                            <button type="submit" class="button button-primary button-submit">Save Changes</button>
+                        </div>
+                        <div class="joomdev-wss-options-box-options">
+                            <div class="joomdev-wss-options-box-options-single">
+                                <h2 class="joomdev-wss-options-box-options-single-title">Networks</h2>
+                                <div class="joomdev-wss-options-box-options-single-option">
+                                    <div class="joomdev-wss-options-box-sided first-cell">
+                                        <h3>Select Networks</h3>
+                                        <small>Add and re-arrange any combination of social network. Selected networks apply to all selected locations in "Button Locations" Settings.</small>
+                                    </div>
+                                    <div class="joomdev-wss-options-box-sided second-cell">
+                                        <button type="button" class="button button-primary joomdev-networks-popup-open">Update Social Networks</button>
+                                        <div class="joomdev-networks-selected"></div>
+                                        <div class="joomdev-networks-popup-outlay joomdev-networks-popup-outlay-toggle">
+                                            <div class="joomdev-networks-popup-outlay-bg"></div>
+                                            <div class="joomdev-networks-popup">
+                                                <div class="joomdev-networks-popup-header">
+                                                    <h3 class="joomdev-networks-popup-title">Select network to add</h3>
+                                                    <button type="button" class="joomdev-networks-popup-close"><i class="fa fa-close"></i></button>
+                                                </div>
+                                                <div class="joomdev-networks-popup-content">
+                                                    <div class="joomdev-networks-wrapper">
+                                                        <?php 
+                                                            $joomdev_wss_networks = get_joomdev_wss_networks();
+                                                            if(!empty($joomdev_wss_networks)){
+                                                                foreach ($joomdev_wss_networks as $key => $network) {
+                                                                    ?>
+                                                                        <div class="joomdev-networks-single joomdev-networks-single-<?php echo $key; ?>">
+                                                                            <a href="javascript:;" role="button" class="joomdev-networks-single-button joomdev-networks-single-button-<?php echo $key; ?>" data-network="<?php echo $key; ?>">
+                                                                                <i class="joomdev-networks-single-icon-first fa fa-<?php echo $network['font_awesome_class']; ?>"></i>
+                                                                                <?php echo $network['label']; ?>
+                                                                                <i class="joomdev-networks-single-icon-second fa fa-plus"></i>
+                                                                                <i class="joomdev-networks-single-icon-second fa fa-close"></i>
+                                                                                <i class="joomdev-networks-single-icon-second fa fa-check"></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    <?php 
+                                                                }
+                                                            }
+                                                        ?>
+                                                    </div>
+                                                </div>
+                                                <div class="joomdev-networks-popup-footer">
+                                                    <button type="button" class="joomdev-networks-popup-save">Update</button>
+                                                    <button type="button" class="joomdev-networks-popup-close">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="joomdev-wss-options-box-actions-footer">
+                            <button type="submit" class="button button-primary button-submit">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+
 
     			<table class="form-table">
     				<tbody>
     					<tr>
     						<th>Select Networks</th>
     						<td>
-    							<button type="button" class="button button-primary joomdev-networks-popup-open">Update Social Networks</button>
-    							<div class="joomdev-networks-selected"></div>
-    							<div class="joomdev-networks-popup-outlay" style="display:none;">
-	    							<div class="joomdev-networks-popup">
-	    								<div class="joomdev-networks-popup-header">
-	    									<h3 class="joomdev-networks-popup-title">Select network to add</h3>
-	    									<button type="button" class="joomdev-networks-popup-close"><i class="fa fa-close"></i></button>
-	    								</div>
-	    								<div class="joomdev-networks-popup-content">
-	    									<div class="joomdev-networks-wrapper">
-		    									<?php 
-		    										$joomdev_wss_networks = get_joomdev_wss_networks();
-		    										if(!empty($joomdev_wss_networks)){
-		    											foreach ($joomdev_wss_networks as $key => $network) {
-		    												?>
-		    													<div class="joomdev-networks-single joomdev-networks-single-<?php echo $key; ?>">
-		    														<a href="javascript:;" role="button" class="joomdev-networks-single-button joomdev-networks-single-button-<?php echo $key; ?>" data-network="<?php echo $key; ?>">
-		    															<i class="joomdev-networks-single-icon-first fa fa-<?php echo $network['font_awesome_class']; ?>"></i>
-		    															<?php echo $network['label']; ?>
-		    															<i class="joomdev-networks-single-icon-second fa fa-plus"></i>
-		    															<i class="joomdev-networks-single-icon-second fa fa-close"></i>
-		    															<i class="joomdev-networks-single-icon-second fa fa-check"></i>
-		    														</a>
-		    													</div>
-		    												<?php 
-		    											}
-		    										}
-		    									?>
-	    									</div>
-	    								</div>
-	    								<div class="joomdev-networks-popup-footer">
-	    									<button type="button" class="joomdev-networks-popup-save">Update</button>
-	    									<button type="button" class="joomdev-networks-popup-close">Cancel</button>
-	    								</div>
-	    							</div>
-    							</div>
+    							
     						</td>
     					</tr>
     					<tr>
