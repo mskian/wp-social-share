@@ -20,8 +20,8 @@ include 'joomdev-wss-functions.php';
 add_action('admin_enqueue_scripts', 'joomdev_wss_admin_enqueue_scripts', 999);
 function joomdev_wss_admin_enqueue_scripts(){
 	wp_enqueue_style('joomdev-wss-font-awesome', plugins_url('assets/css/font-awesome.min.css', __FILE__));
-	wp_enqueue_style('joomdev-wss-styles', plugins_url('assets/css/styles.css', __FILE__));
-	wp_enqueue_script('joomdev-wss-scripts', plugins_url('assets/js/scripts.js', __FILE__));
+	wp_enqueue_style('joomdev-wss-admin-styles', plugins_url('assets/css/admin-styles.css', __FILE__));
+	wp_enqueue_script('joomdev-wss-admin-scripts', plugins_url('assets/js/admin-scripts.js', __FILE__));
 }
 
 add_action( 'admin_menu', 'joomdev_wss_register_menu_page' );
@@ -71,8 +71,18 @@ function joomdev_wss_register_menu_page_callback(){
                         <div class="joomdev-wss-options-box-menubar">
                             <ul>
                                 <li class="active">
-                                    <a href="javascript:;">
-                                        <i class="fa fa-bars"></i> General Settings
+                                    <a href="javascript:;" data-tab-name="network">
+                                        <i class="fa fa-sitemap"></i> Network
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-tab-name="setup">
+                                        <i class="fa fa-cog"></i> Setup
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-tab-name="design">
+                                        <i class="fa fa-paint-brush"></i> Design
                                     </a>
                                 </li>
                             </ul>
@@ -80,10 +90,11 @@ function joomdev_wss_register_menu_page_callback(){
                     </div>
                     <div class="joomdev-wss-options-box-main">
                         <div class="joomdev-wss-options-box-actions-header">
-                            <button type="submit" class="button button-primary button-submit">Save Changes</button>
+                            <!-- <button type="submit" class="button button-primary button-submit">Save Changes</button> -->
+                            <a class="joomdev-wss-more-themes-plugins-link" href="<?php echo $plugin_data['AuthorURI']; ?>" target="_BLANK"><i class="fa fa-shopping-cart"></i> More Themes &amp; Plugins</a>
                         </div>
                         <div class="joomdev-wss-options-box-options">
-                            <div class="joomdev-wss-options-box-options-single">
+                            <div data-tab="network" class="joomdev-wss-options-box-options-single">
                                 <h2 class="joomdev-wss-options-box-options-single-title">Networks</h2>
                                 <div class="joomdev-wss-options-box-options-single-option">
                                     <div class="joomdev-wss-options-box-sided first-cell">
@@ -92,7 +103,9 @@ function joomdev_wss_register_menu_page_callback(){
                                     </div>
                                     <div class="joomdev-wss-options-box-sided second-cell">
                                         <button type="button" class="button button-primary joomdev-networks-popup-open">Update Social Networks</button>
-                                        <div class="joomdev-networks-selected"></div>
+                                        <div class="joomdev-networks-selected">
+                                            
+                                        </div>
                                         <div class="joomdev-networks-popup-outlay joomdev-networks-popup-outlay-toggle">
                                             <div class="joomdev-networks-popup-outlay-bg"></div>
                                             <div class="joomdev-networks-popup">
@@ -107,8 +120,8 @@ function joomdev_wss_register_menu_page_callback(){
                                                             if(!empty($joomdev_wss_networks)){
                                                                 foreach ($joomdev_wss_networks as $key => $network) {
                                                                     ?>
-                                                                        <div class="joomdev-networks-single joomdev-networks-single-<?php echo $key; ?>">
-                                                                            <a href="javascript:;" role="button" class="joomdev-networks-single-button joomdev-networks-single-button-<?php echo $key; ?>" data-network="<?php echo $key; ?>">
+                                                                        <div class="joomdev-networks-single joomdev-networks-single-<?php echo $key; ?> joomdev-wss-<?php echo $key; ?>-holder">
+                                                                            <a href="javascript:;" role="button" class="joomdev-networks-single-button joomdev-networks-single-button-<?php echo $key; ?> joomdev-wss-<?php echo $key; ?>" data-network="<?php echo $key; ?>">
                                                                                 <i class="joomdev-networks-single-icon-first fa fa-<?php echo $network['font_awesome_class']; ?>"></i>
                                                                                 <?php echo $network['label']; ?>
                                                                                 <i class="joomdev-networks-single-icon-second fa fa-plus"></i>
@@ -130,6 +143,12 @@ function joomdev_wss_register_menu_page_callback(){
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div data-tab="setup" class="joomdev-wss-options-box-options-single" style="display:none;">
+                                setup
+                            </div>
+                            <div data-tab="design" class="joomdev-wss-options-box-options-single" style="display:none;">
+                                design
                             </div>
                         </div>
                         <div class="joomdev-wss-options-box-actions-footer">
@@ -181,7 +200,7 @@ function joomdev_wss_register_menu_page_callback(){
     								$post_types = get_post_types(array(), 'objects');
     								if(!empty($post_types)){
     									foreach ($post_types as $key => $value) {
-    										if(in_array($key, array('attachment', 'revision', 'nav_menu_item'))){
+    										if(in_array($key, array('attachment', 'revision', 'nav_menu_item', 'custom_css', 'customize_changeset', 'oembed_cache'))){
     											continue;
     										}
     										?>
