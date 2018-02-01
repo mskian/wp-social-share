@@ -104,7 +104,14 @@ function joomdev_wss_register_menu_page_callback(){
                                     <div class="joomdev-wss-options-box-sided second-cell">
                                         <button type="button" class="button button-primary joomdev-networks-popup-open">Update Social Networks</button>
                                         <div class="joomdev-networks-selected">
-                                            
+                                            <div class="joomdev-networks-selected-single">
+                                                <i class="fa fa-arrows-alt fa-rotate-90"></i>
+                                                <a href="javascript:;" class="joomdev-networks-selected-single-button">
+                                                    <i class="fa fa-facebook"></i>
+                                                    <i class="fa fa-close"></i>
+                                                </a>
+                                                <input type="text" name="joomdev_wss_options[network][facebook][]" class="joomdev-wss-regular-text">
+                                            </div>
                                         </div>
                                         <div class="joomdev-networks-popup-outlay joomdev-networks-popup-outlay-toggle">
                                             <div class="joomdev-networks-popup-outlay-bg"></div>
@@ -121,7 +128,7 @@ function joomdev_wss_register_menu_page_callback(){
                                                                 foreach ($joomdev_wss_networks as $key => $network) {
                                                                     ?>
                                                                         <div class="joomdev-networks-single joomdev-networks-single-<?php echo $key; ?> joomdev-wss-<?php echo $key; ?>-holder">
-                                                                            <a href="javascript:;" role="button" class="joomdev-networks-single-button joomdev-networks-single-button-<?php echo $key; ?> joomdev-wss-<?php echo $key; ?>" data-network="<?php echo $key; ?>">
+                                                                            <a data-network-name="<?php echo $key; ?>" data-network-label="<?php echo $network['label']; ?>" href="javascript:;" role="button" class="joomdev-networks-single-button joomdev-networks-single-button-<?php echo $key; ?> joomdev-wss-<?php echo $key; ?>" data-network="<?php echo $key; ?>">
                                                                                 <i class="joomdev-networks-single-icon-first fa fa-<?php echo $network['font_awesome_class']; ?>"></i>
                                                                                 <?php echo $network['label']; ?>
                                                                                 <i class="joomdev-networks-single-icon-second fa fa-plus"></i>

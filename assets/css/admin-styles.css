@@ -1,6 +1,13 @@
 [type="button"]{
 	cursor: pointer;
 }
+/*.fa-rotate-90{
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}*/
 .joomdev-wss-more-themes-plugins-link{
 	background-color: #23282d;
     padding: 10px 20px;

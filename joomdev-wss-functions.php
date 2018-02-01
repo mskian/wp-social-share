@@ -59,5 +59,15 @@ function get_joomdev_wss_networks(){
 	return $networks;
 }
 
+add_action('admin_footer', 'joomdev_wss_networks_in_footer', 99);
+add_action('wp_footer', 'joomdev_wss_networks_in_footer', 99);
+function joomdev_wss_networks_in_footer(){
+	$joomdev_wss_networks = get_joomdev_wss_networks();
+	?>
+		<script type="text/javascript">
+            var joomdev_wss_networks = '<?php echo json_encode($joomdev_wss_networks); ?>';
+        </script>
+	<?Php 
+}
 
 // file ends here...
