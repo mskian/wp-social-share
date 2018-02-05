@@ -8,6 +8,24 @@
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
 }*/
+.joomdev-form-field{
+	display: block;
+}
+.joomdev-form-field label{
+	cursor: pointer;
+}
+.joomdev-form-field label span{
+	display: inline-block;
+	min-width: 150px;
+}
+.joomdev-form-field input:not([type="checkbox"]){
+	display: inline-block;
+	min-width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    color: rgba(0,0,0,0.9);
+    border-radius: 3px;
+}
 .joomdev-wss-more-themes-plugins-link{
 	background-color: #23282d;
     padding: 10px 20px;
@@ -115,6 +133,13 @@
 .joomdev-wss-options-box-options-single-option{
 	display: table;
 	min-width: 100%;
+	margin-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 20px;
+}
+.joomdev-wss-options-box-options-single > .joomdev-wss-options-box-options-single-option:last-child{
+	border: none;
+	padding-bottom: 0;
 }
 .joomdev-wss-options-box-sided{
 	display: table-cell;
@@ -557,4 +582,758 @@
 }
 .joomdev-wss-whatsapp .joomdev-networks-single-icon-second{
 	background-color: #2cb742;
+}
+
+
+/*
+=========================================================================================
+=========================================================================================
+FOR SELECTESD NETWORKS
+=========================================================================================
+=========================================================================================
+*/
+.joomdev-networks-selected{
+	display: block;
+	min-height: 50px;
+	margin-top: 20px;
+}
+.joomdev-networks-selected-single{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.joomdev-networks-selected-single .fa-arrows-alt{
+	font-size: 20px;
+	color: rgba(0,0,0,0.9);
+}
+.joomdev-networks-selected-single .joomdev-wss-regular-text{
+	display: inline-block;
+    min-width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    color: rgba(0,0,0,0.9);
+    border-radius: 3px;
+}
+.joomdev-networks-selected-single-button{
+	display: inline-block;
+	border: 1px solid rgba(0,0,0,0.4);
+	color: rgba(0,0,0,0.9);
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 3px;
+	padding: 10px 15px;
+	position: relative;
+	overflow: hidden;
+}
+.joomdev-networks-selected-single-button .fa-close{
+	position: absolute;
+	left: 50px;
+	transition: left 0.1s linear;
+	top: 0;
+	padding: 10px 13px;
+	background-color: rgba(0,0,0,0.9);
+	color: #fff;
+}
+.joomdev-networks-selected-single-button:hover .fa-close{
+	left: 0;
+}
+
+
+
+
+/*
+========================================================================
+========================================================================
+MULTI SELECT ANIMATION
+========================================================================
+========================================================================
+*/
+.joomdev-wss-multiselect-animation{
+	display: flex;
+  	flex-flow: row wrap;
+  	/*overflow: hidden;*/
+  	/*padding-top: 5px;*/
+}
+.joomdev-wss-multiselect-animation > div{
+	flex: 1;
+  	padding: 5px;
+  	position: relative;
+  	padding-top: 25px;
+  	overflow: hidden;
+}
+.joomdev-wss-multiselect-animation input[type="checkbox"], .joomdev-wss-multiselect-animation input[type="radio"] {
+	/*display: none;*/
+	border: none;
+    box-shadow: none;
+    display: block;
+    width: calc(100% + 50px);
+    position: absolute;
+    height: calc(100% + 50px);
+    z-index: 11;
+    top: -25px;
+    left: -25px;
+    background-color: transparent;
+    color: transparent !important;
+}
+.joomdev-wss-multiselect-animation input[type="checkbox"]:not(:disabled) ~ label, .joomdev-wss-multiselect-animation input[type="radio"]:not(:disabled) ~ label {
+    cursor: pointer;
+}
+.joomdev-wss-multiselect-animation input[type="checkbox"]:disabled ~ label, .joomdev-wss-multiselect-animation input[type="radio"]:disabled ~ label {
+	color: #444;
+	border-color: #0073aa;
+	box-shadow: none;
+	cursor: not-allowed;
+}
+.joomdev-wss-multiselect-animation label{
+	height: 60px;
+  	display: block;
+  	background: #fff;
+  	border: 1px solid #0073aa;
+  	border-radius: 3px;
+  	padding: 20px;
+  	/*margin-bottom: 1rem;*/
+  	/*margin: 1rem;*/
+  	text-align: center;
+  	font-size: 15px;
+  	font-weight: bold;
+  	box-shadow: 0px 3px 10px -2px #0073aa;
+  	position: relative;
+  	padding-top: 50px;
+}
+
+.joomdev-wss-multiselect-animation input[type="checkbox"]:checked + label, .joomdev-wss-multiselect-animation input[type="radio"]:checked + label {
+  	background-color: #0073aa;
+  	color: #fff;
+  	box-shadow: 0px 0px 7px #0073aa;
+}
+
+.joomdev-wss-multiselect-animation input[type="checkbox"] + label:after, .joomdev-wss-multiselect-animation input[type="radio"] + label:after{
+	color: #0073aa;
+	content: "";
+	font-family: FontAwesome;
+	border: 1px solid #0073aa;
+	content: "\f00c";
+	font-size: 24px;
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 50%;
+	background: white;
+	box-shadow: 0px 2px 5px -2px #0073aa;
+	transition: all 0.1s linear;
+}
+.joomdev-wss-multiselect-animation input[type="checkbox"]:checked + label:after, .joomdev-wss-multiselect-animation input[type="radio"]:checked + label:after{
+	top: -25px;
+}
+
+@media only screen and (max-width: 700px) {
+  	.joomdev-wss-multiselect-animation {
+    	flex-direction: column;
+  	}
+}
+
+.joomdev-wss-multiselect-animation-horizontal{
+	/*display: flex;*/
+  	/*flex-flow: row wrap;*/
+  	/*overflow: hidden;*/
+  	/*padding-top: 5px;*/
+}
+.joomdev-wss-multiselect-animation-horizontal > div{
+	/*flex: 1;*/
+  	padding: 5px;
+  	position: relative;
+  	/*padding-top: 25px;*/
+  	overflow: hidden;
+}
+.joomdev-wss-multiselect-animation-horizontal input[type="checkbox"], .joomdev-wss-multiselect-animation-horizontal input[type="radio"] {
+	/*display: none;*/
+	border: none;
+    box-shadow: none;
+    display: block;
+    width: calc(100% + 50px);
+    position: absolute;
+    height: calc(100% + 50px);
+    z-index: 11;
+    top: -25px;
+    left: -25px;
+    background-color: transparent;
+    color: transparent !important;
+}
+.joomdev-wss-multiselect-animation-horizontal input[type="checkbox"]:not(:disabled) ~ label, .joomdev-wss-multiselect-animation-horizontal input[type="radio"]:not(:disabled) ~ label {
+    cursor: pointer;
+}
+.joomdev-wss-multiselect-animation-horizontal input[type="checkbox"]:disabled ~ label, .joomdev-wss-multiselect-animation-horizontal input[type="radio"]:disabled ~ label {
+	color: #444;
+	border-color: #0073aa;
+	box-shadow: none;
+	cursor: not-allowed;
+}
+.joomdev-wss-multiselect-animation-horizontal label{
+	/*height: 60px;*/
+  	display: block;
+  	background: #fff;
+  	/*border: 1px solid #0073aa;*/
+  	border-radius: 3px;
+  	padding: 10px 0;
+  	/*margin-bottom: 1rem;*/
+  	/*margin: 1rem;*/
+  	text-align: left;
+  	font-size: 15px;
+  	font-weight: bold;
+  	/*box-shadow: 0px 3px 10px -2px #0073aa;*/
+  	position: relative;
+  	/*padding-top: 50px;*/
+}
+
+.joomdev-wss-multiselect-animation-horizontal input[type="checkbox"]:checked + label, .joomdev-wss-multiselect-animation-horizontal input[type="radio"]:checked + label {
+  	/*background-color: #0073aa;*/
+  	/*color: #fff;*/
+  	/*box-shadow: 0px 0px 7px #0073aa;*/
+}
+
+.joomdev-wss-multiselect-animation-horizontal input[type="checkbox"] + label:after, .joomdev-wss-multiselect-animation-horizontal input[type="radio"] + label:after{
+	color: #0073aa;
+	content: "";
+	font-family: FontAwesome;
+	border: 1px solid #0073aa;
+	content: "\f00c";
+	font-size: 15px;
+	position: absolute;
+	top: 13px;
+	left: -100px;
+	transform: translateX(-50%);
+	height: 35px;
+	width: 35px;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 50%;
+	background: white;
+	box-shadow: 0px 2px 5px -2px #0073aa;
+	transition: all 0.1s linear;
+}
+.joomdev-wss-multiselect-animation-horizontal input[type="checkbox"]:checked + label:after, .joomdev-wss-multiselect-animation-horizontal input[type="radio"]:checked + label:after{
+	/*top: -25px;*/
+	left: 95%;
+}
+.joomdev-wss-multiselect-animation-horizontal > div:hover input[type="checkbox"] + label:after, .joomdev-wss-multiselect-animation-horizontal > div:hover input[type="radio"] + label:after{
+	left: 95%;
+}
+
+
+/*
+========================================================================
+========================================================================
+SINGLE SELECT ANIMATION
+========================================================================
+========================================================================
+*/
+.joomdev-wss-singleselect-animation{
+	width: 100%;
+}
+.joomdev-wss-singleselect-animation > div{
+	position: relative;
+	padding: 10px;
+	padding-left: 40px;
+	height: 30px;
+}
+.joomdev-wss-singleselect-animation > span{
+	display: block;
+	width: 100%;
+	margin-left: 40px;
+}
+.joomdev-wss-singleselect-animation > div label:before{
+	content: "";
+    width: 15px;
+    height: 15px;
+    background: #0073aa;
+    position: absolute;
+    left: 7px;
+	top: calc(50% - 13px);
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"] {
+	opacity: 0;
+	-webkit-appearance: none;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 100;
+	margin: 0;
+	padding: 0;
+  	width: 100%;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 15px);
+	cursor: pointer;
+}
+.joomdev-wss-singleselect-animation > div .bullet {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    left: -3px;
+    top: 2px;
+    border: 5px solid #0073aa;
+    opacity: 0;
+    border-radius: 50%;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"]:checked ~ .bullet {
+	position:absolute;
+	opacity: 1;
+	animation-name: explode;
+	animation-duration: 0.350s;
+}
+.joomdev-wss-singleselect-animation > div .line {
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background-color: #0073aa;
+	opacity:0;
+}
+.joomdev-wss-singleselect-animation > div .line.zero {
+	left: 11px;
+	top: -21px;
+	transform: translateY(20px);
+	width: 2px;
+	height: 10px;
+}
+.joomdev-wss-singleselect-animation > div .line.one {
+	right: -7px;
+	top: -11px;
+	transform: rotate(-55deg) translate(-9px);
+}
+.joomdev-wss-singleselect-animation > div .line.two {
+	right: -20px;
+	top: 11px;
+	transform: translate(-9px);
+}
+.joomdev-wss-singleselect-animation > div .line.three {
+	right: -8px;
+	top: 35px;
+	transform: rotate(55deg) translate(-9px);
+}
+.joomdev-wss-singleselect-animation > div .line.four {
+	left: -8px;
+	top: -11px;
+	transform: rotate(55deg) translate(9px);
+}
+.joomdev-wss-singleselect-animation > div .line.five {
+	left: -20px;
+	top: 11px;
+	transform: translate(9px);
+}
+.joomdev-wss-singleselect-animation > div .line.six {
+	left: -8px;
+	top: 35px;
+	transform: rotate(-55deg) translate(9px);
+}
+.joomdev-wss-singleselect-animation > div .line.seven {
+	left: 11px;
+	bottom: -21px;
+	transform: translateY(-20px);
+	width: 2px;
+	height: 10px;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"]:checked ~ .bullet .line.zero{
+	animation-name:drop-zero;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"]:checked ~ .bullet .line.one{
+	animation-name:drop-one;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"]:checked ~ .bullet .line.two{
+	animation-name:drop-two;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"]:checked ~ .bullet .line.three{
+	animation-name:drop-three;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"]:checked ~ .bullet .line.four{
+	animation-name:drop-four;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"]:checked ~ .bullet .line.five{
+	animation-name:drop-five;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"]:checked ~ .bullet .line.six{
+	animation-name:drop-six;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+.joomdev-wss-singleselect-animation > div input[type="radio"]:checked ~ .bullet .line.seven{
+	animation-name:drop-seven;
+	animation-delay: 0.100s;
+	animation-duration: 0.9s;
+	animation-fill-mode: forwards;
+}
+@keyframes explode {
+	0%{
+		opacity: 0;
+		transform: scale(10);
+	}
+	60%{
+		opacity: 1;
+		transform: scale(0.5);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+@keyframes drop-zero {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+		height: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: translateY(-2px);
+		height: 0px;
+		opacity:0;
+	}
+}
+@keyframes drop-one {
+	0% {
+		opacity: 0;
+		transform: rotate(-55deg) translate(-20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: rotate(-55deg) translate(9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+@keyframes drop-two {
+	0% {
+		opacity: 0;
+		transform: translate(-20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: translate(9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+@keyframes drop-three {
+	0% {
+		opacity: 0;
+		transform: rotate(55deg) translate(-20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: rotate(55deg) translate(9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+@keyframes drop-four {
+	0% {
+		opacity: 0;
+		transform: rotate(55deg) translate(20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: rotate(55deg) translate(-9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+@keyframes drop-five {
+	0% {
+		opacity: 0;
+		transform: translate(20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: translate(-9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+@keyframes drop-six {
+	0% {
+		opacity: 0;
+		transform: rotate(-55deg) translate(20px);
+		width: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: rotate(-55deg) translate(-9px);
+		width: 0px;
+		opacity:0;
+	}
+}
+@keyframes drop-seven {
+0% {
+		opacity: 0;
+		transform: translateY(-20px);
+		height: 10px;
+	}
+	20% {
+		opacity:1;
+	}
+	100% {
+		transform: translateY(2px);
+		height: 0px;
+		opacity:0;
+	}
+}
+/*
+=============================================================================
+=============================================================================
+Button shape
+=============================================================================
+=============================================================================
+*/
+.joomdev-wss-shape-1{
+	font-size: 20px;
+    color: #fff !important;
+    border: rgba(255, 89, 3, 1);
+    background-color: rgba(255, 89, 3, 1);
+    padding: 11px 20px;
+}
+.joomdev-wss-shape-2{
+	font-size: 20px;
+    color: #fff !important;
+    border: rgba(255, 89, 3, 1);
+    background-color: rgba(255, 89, 3, 1);
+    padding: 11px 20px;
+    border-radius: 5px;
+}
+.joomdev-wss-shape-3{
+	font-size: 20px;
+    color: #fff !important;
+    border: rgba(255, 89, 3, 1);
+    background-color: rgba(255, 89, 3, 1);
+    padding: 14px 20px;
+    border-radius: 50%;
+}
+/*
+=============================================================================
+=============================================================================
+Button animation
+=============================================================================
+=============================================================================
+*/
+.joomdev-wss-animation-1 a{
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+	text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    line-height: 40px;
+    width: 160px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.9);
+    transition: all .5s ease;
+}
+.joomdev-wss-animation-1:hover a{
+	box-shadow: 0 0 5px #333;
+}
+.joomdev-wss-animation-1 a.facebook{
+	background-color: #395aa1;
+}
+.joomdev-wss-animation-1 a.twitter{
+	background-color: #3c9cd8;
+}
+.joomdev-wss-animation-1 a.linkedin{
+	background-color: #0c78b9;
+}
+
+.joomdev-wss-animation-2 a{
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    line-height: 40px;
+    width: 160px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all .5s ease;
+    text-align: center;
+}
+.joomdev-wss-animation-2 a .fa:nth-child(1){
+	top: -40px;
+	vertical-align: middle;
+    line-height: 41px;
+    background: rgba(0,0,0,0.1);
+    left: 0px;
+    padding-left: 10px;
+    width: 30px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+    border-radius: 4px 0 0 4px;
+}
+.joomdev-wss-animation-2 a .fa:nth-child(2){
+	display: block;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+    line-height: 41px;
+    background: rgba(0,0,0,0.1);
+    left: 0px;
+    padding-left: 10px;
+    width: 30px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+    border-radius: 4px 0 0 4px;
+}
+.joomdev-wss-animation-2:hover a .fa:nth-child(1){
+	display: block;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.1);
+}
+.joomdev-wss-animation-2:hover a .fa:nth-child(2){
+	top: 40px;
+}
+.joomdev-wss-animation-2 a.facebook{
+	background-color: #395aa1;
+}
+.joomdev-wss-animation-2 a.twitter{
+	background-color: #3c9cd8;
+}
+.joomdev-wss-animation-2 a.linkedin{
+	background-color: #0c78b9;
+}
+
+.joomdev-wss-animation-3 a{
+	text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    line-height: 40px;
+    width: 160px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all .5s ease;
+    position: relative;
+    /*text-align: center;*/
+}
+.joomdev-wss-animation-3 a span{
+	margin-left: 55px;
+    transition: all 0.5s ease;
+}
+.joomdev-wss-animation-3 a .fa{
+	vertical-align: middle;
+    line-height: 41px;
+    background: rgba(0,0,0,0.1);
+    left: 0px;
+    padding-left: 10px;
+    width: 30px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+    border-radius: 4px 0 0 4px;
+}
+.joomdev-wss-animation-3:hover a .fa{
+	padding-left: 16px;
+    padding-right: 4px;
+    background: rgba(0,0,0,0.4);
+}
+.joomdev-wss-animation-3:hover a span{
+	margin-left: 65px;
+}
+.joomdev-wss-animation-3 a.facebook{
+	background-color: #395aa1;
+}
+.joomdev-wss-animation-3 a.twitter{
+	background-color: #3c9cd8;
+}
+.joomdev-wss-animation-3 a.linkedin{
+	background-color: #0c78b9;
+}
+
+.joomdev-wss-animation-4 a{
+	text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    line-height: 40px;
+    width: 160px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    transition: all .5s ease;	
+}
+.joomdev-wss-animation-4 a .fa{
+	text-align: left;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    line-height: 41px;
+    background: rgba(0,0,0,0.1);
+    left: 0px;
+    padding-left: 10px;
+    width: 30px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+    border-radius: 4px 0 0 4px;
+}
+.joomdev-wss-animation-4:hover a .fa{
+	width: 150px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.4);
+}
+.joomdev-wss-animation-4 a.facebook{
+	background-color: #395aa1;
+}
+.joomdev-wss-animation-4 a.twitter{
+	background-color: #3c9cd8;
+}
+.joomdev-wss-animation-4 a.linkedin{
+	background-color: #0c78b9;
 }
