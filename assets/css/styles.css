@@ -1,0 +1,625 @@
+.joomdev-wss-social-share-incentive {
+    color: #333;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.joomdev-wss-social-share-buttons {
+    display: block;
+    width: 100%;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button {
+    display: inline-block;
+    width: 175px;
+    position: relative;
+    margin-right: 5px;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.joomdev-wss-share-count {
+    display: block;
+    position: absolute;
+    padding: 2px 12px;
+    background-color: #ccc;
+    color: #444;
+    border-radius: 2px;
+    top: -70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.joomdev-wss-share-count:after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #ccc;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button.joomdev-wss-social-share-icon_only {
+    width: unset;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    line-height: 40px;
+    width: 175px;
+    height: 41px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    transition: all .5s ease;
+    overflow: hidden;
+    border: none !important;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-3 {
+    padding-left: 30px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-3:hover {
+    padding-left: 40px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button.joomdev-wss-social-share-icon_only a {
+    padding: 0 !important;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button.joomdev-wss-social-share-icon_only a .fa {
+    height: 45px;
+    line-height: 45px;
+    font-size: 15px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button.joomdev-wss-social-share-icon_only a:hover .fa {
+    width: 45px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-icon_only span {
+    display: none;
+}
+
+.joomdev-wss-social-share-more-buttons {
+    font-size: 16px;
+    color: #fff !important;
+    border: rgba(255, 89, 3, 1);
+    background-color: rgba(255, 89, 3, 1);
+    padding: 11px 20px;
+}
+
+/* 
+===================================================================================================
+manage shapes 
+===================================================================================================
+*/
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-shape-1 {
+    border-radius: 0;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-shape-2 {
+    border-radius: 5px;
+    padding-left: 30px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-shape-3 {
+    border-radius: 20px;
+    padding-left: 30px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button.joomdev-wss-social-share-icon_only a.joomdev-wss-button-shape-3 {
+    border-radius: 50%;
+    font-size: 0;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button.joomdev-wss-social-share-icon_only a.joomdev-wss-button-animation-3:hover .fa {
+    background-color: inherit;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-icon_only.joomdev-wss-button-animation-3 .fa:after {
+    display: none;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button.joomdev-wss-social-share-icon_only a .fa {
+    width: 45px !important;
+    height: 45px !important;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button.joomdev-wss-social-share-icon_only a.joomdev-wss-button-animation-2 .fa:nth-child(1) {
+    top: -45px;
+}
+
+/* 
+===================================================================================================
+manage animation 
+===================================================================================================
+*/
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-1 {
+    text-align: center;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-1 .fa {
+    margin-right: 5px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-2 .fa {
+    top: -40px;
+    vertical-align: middle;
+    line-height: 41px;
+    background: rgba(0, 0, 0, 0.1);
+    left: 0px;
+    width: 40px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+    border-radius: 4px 0 0 4px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-2 .fa:nth-child(3) {
+    display: block;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-2:hover .fa:nth-child(1) {
+    display: block;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-2:hover .fa:nth-child(3) {
+    top: 40px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-3 .fa,
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-4 .fa {
+    top: 0;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-3 .fa {
+    vertical-align: middle;
+    line-height: 41px;
+    background: #212121;
+    left: 0px;
+    width: 40px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-3 .fa:after {
+    content: "";
+    border: 8px solid;
+    border-color: transparent transparent transparent #222;
+    position: absolute;
+    top: 13px;
+    right: -15px;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-4 .fa {
+    text-align: center;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    line-height: 41px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 45px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+    float: left;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-animation-4:hover .fa {
+    width: 160px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button.joomdev-wss-social-share-icon_only a:hover .fa {
+    width: 45px;
+}
+
+/*
+======================================================================================================================
+Siderbar icon
+======================================================================================================================
+*/
+
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 5px;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: calc(100% - 200px);
+    width: 50px;
+    z-index: 99999999999;
+    max-height: 302px;
+}
+
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button.joomdev-wss-social-share-text_and_icons {
+    margin-bottom: 5px;
+}
+
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button {
+    display: block;
+}
+
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-button-text_and_icons {
+    font-size: 0;
+    width: 40px;
+    overflow: visible;
+}
+
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-button-text_and_icons .fa {
+    font-size: 15px;
+    line-height: 41px;
+    margin: 0 !important;
+    width: 40px !important;
+}
+
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button a.joomdev-wss-button-shape-3,
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button a.joomdev-wss-button-shape-2 {
+    padding-left: 0;
+    overflow: hidden;
+}
+
+/*
+======================================================================================================================
+Social link colors
+======================================================================================================================
+*/
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-facebook {
+    /*color: #3a579a;*/
+    background-color: #3a579a;
+    border: 1px solid #3a579a;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-facebook:hover {
+    /*color: #3a579a;*/
+    background-color: #3a579a;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-twitter {
+    /*color: #00abf0;*/
+    background-color: #00abf0;
+    border: 1px solid #00abf0;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-twitter:hover {
+    /*color: #00abf0;*/
+    background-color: #00abf0;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-googleplus {
+    /*color: #df4a32;*/
+    background-color: #df4a32;
+    border: 1px solid #df4a32;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-googleplus:hover {
+    /*color: #df4a32;*/
+    background-color: #df4a32;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-buffer {
+    /*color: #222222;*/
+    background-color: #222222;
+    border: 1px solid #222222;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-buffer:hover {
+    /*color: #222222;*/
+    background-color: #222222;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-digg {
+    /*color: #546b9f;*/
+    background-color: #546b9f;
+    border: 1px solid #546b9f;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-digg:hover {
+    /*color: #546b9f;*/
+    background-color: #546b9f;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-evernote {
+    /*color: #7cbf4b;*/
+    background-color: #7cbf4b;
+    border: 1px solid #7cbf4b;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-evernote:hover {
+    /*color: #7cbf4b;*/
+    background-color: #7cbf4b;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-pinterest {
+    /*color: #cd1c1f;*/
+    background-color: #cd1c1f;
+    border: 1px solid #cd1c1f;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-pinterest:hover {
+    /*color: #cd1c1f;*/
+    background-color: #cd1c1f;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-friendfeed {
+    /*color: #5989c0;*/
+    background-color: #5989c0;
+    border: 1px solid #5989c0;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-friendfeed:hover {
+    /*color: #5989c0;*/
+    background-color: #5989c0;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-hackernews {
+    /*color: #f08641;*/
+    background-color: #f08641;
+    border: 1px solid #f08641;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-hackernews:hover {
+    /*color: #f08641;*/
+    background-color: #f08641;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-livejournal {
+    /*color: #336697;*/
+    background-color: #336697;
+    border: 1px solid #336697;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-livejournal:hover {
+    /*color: #336697;*/
+    background-color: #336697;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-newsvine {
+    /*color: #0d642e;*/
+    background-color: #0d642e;
+    border: 1px solid #0d642e;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-newsvine:hover {
+    /*color: #0d642e;*/
+    background-color: #0d642e;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-aol {
+    /*color: #222222;*/
+    background-color: #222222;
+    border: 1px solid #222222;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-aol:hover {
+    /*color: #222222;*/
+    background-color: #222222;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-gmail {
+    /*color: #dd4b39;*/
+    background-color: #dd4b39;
+    border: 1px solid #dd4b39;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-gmail:hover {
+    /*color: #dd4b39;*/
+    background-color: #dd4b39;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-printfriendly {
+    /*color: #75aa33;*/
+    background-color: #75aa33;
+    border: 1px solid #75aa33;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-printfriendly:hover {
+    /*color: #75aa33;*/
+    background-color: #75aa33;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-yahoomail {
+    /*color: #511295;*/
+    background-color: #511295;
+    border: 1px solid #511295;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-yahoomail:hover {
+    /*color: #511295;*/
+    background-color: #511295;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-delicious {
+    /*color: #3398fc;*/
+    background-color: #3398fc;
+    border: 1px solid #3398fc;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-delicious:hover {
+    /*color: #3398fc;*/
+    background-color: #3398fc;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-reddit {
+    /*color: #fc461e;*/
+    background-color: #fc461e;
+    border: 1px solid #fc461e;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-reddit:hover {
+    /*color: #fc461e;*/
+    background-color: #fc461e;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-vkontakte {
+    /*color: #4c75a3;*/
+    background-color: #4c75a3;
+    border: 1px solid #4c75a3;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-vkontakte:hover {
+    /*color: #4c75a3;*/
+    background-color: #4c75a3;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-linkedin {
+    /*color: #127bb6;*/
+    background-color: #127bb6;
+    border: 1px solid #127bb6;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-linkedin:hover {
+    /*color: #127bb6;*/
+    background-color: #127bb6;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-myspace {
+    /*color: #3a5998;*/
+    background-color: #3a5998;
+    border: 1px solid #3a5998;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-myspace:hover {
+    /*color: #3a5998;*/
+    background-color: #3a5998;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-blogger {
+    /*color: #f59038;*/
+    background-color: #f59038;
+    border: 1px solid #f59038;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-blogger:hover {
+    /*color: #f59038;*/
+    background-color: #f59038;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-stumbleupon {
+    /*color: #ea4b24;*/
+    background-color: #ea4b24;
+    border: 1px solid #ea4b24;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-stumbleupon:hover {
+    /*color: #ea4b24;*/
+    background-color: #ea4b24;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-tumblr {
+    /*color: #32506d;*/
+    background-color: #32506d;
+    border: 1px solid #32506d;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-tumblr:hover {
+    /*color: #32506d;*/
+    background-color: #32506d;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-whatsapp {
+    /*color: #2cb742;*/
+    background-color: #2cb742;
+    border: 1px solid #2cb742;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-button a.joomdev-wss-button-whatsapp:hover {
+    /*color: #2cb742;*/
+    background-color: #2cb742;
+}
+
+
+/*
+===================================================================================================================
+Media box css
+===================================================================================================================
+*/
+
+.joomdev-wss-social-share-buttons-media {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    top: 30px;
+    left: -50%;
+    white-space: nowrap;
+}
+.joomdev-wss-social-share-buttons-media-wrapper{
+    position: relative;
+    display: inline-block;
+}
+.joomdev-wss-social-share-buttons-media-wrapper:hover .joomdev-wss-social-share-buttons-media {
+    display: block;
+}
+
+/*
+====================================================================================================================
+More networks
+====================================================================================================================
+*/
+.joomdev-wss-social-share-popup-more{
+    position: absolute;
+    width: 221px;
+    top: 0;
+    /*left: 60px;*/
+    left: -500px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px 0px #000;
+    border-radius: 2px;
+    transition: all 0.2s linear;
+}
+.joomdev-wss-social-share-popup-more.joomdev-wss-social-share-popup-more-show{
+    left: 60px;
+    transition: all 0.2s linear;
+}
+.joomdev-wss-social-share-popup-more:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 10px;
+    left: -13px;
+    box-sizing: border-box;
+    border: 10px solid black;
+    border-color: #fff transparent transparent #fff;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    box-shadow: -3px -3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-popup-more .joomdev-wss-social-share-button{
+    display: inline-block;
+}
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button{
+    width: unset;
+}
