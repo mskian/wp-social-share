@@ -97,4 +97,13 @@ jQuery(function($){
         url_shorting = url_shorting.replace('.', '_');
     	$('.joomdev-wss-url_shorting-box.url_shorting_' + url_shorting).slideDown('slow');
     });
+
+    $(document).on('change', '#enable_share_incentive', function(){
+        if($(this).is(':checked')){
+            $(this).closest('.joomdev-wss-options-box-options-single-option').next('.joomdev-wss-options-box-options-single-option').fadeIn('slow');
+        }
+        else{
+            $(this).closest('.joomdev-wss-options-box-options-single-option').next('.joomdev-wss-options-box-options-single-option').fadeOut('slow');
+        }
+    });
 });

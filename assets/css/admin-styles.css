@@ -402,9 +402,7 @@ CSS FOR CHECKBOXES/RADIOS.
 ========================================================================
 ========================================================================
 */
-
-.joomdev-wss-options-box input[type=radio],
-.joomdev-wss-options-box input[type=checkbox] {
+.joomdev-wss-options-box input[type=radio], .joomdev-wss-options-box input[type=checkbox]{
     border: 1px solid #00b0ff;
     color: #00b0ff;
     background-color: transparent;
@@ -412,9 +410,7 @@ CSS FOR CHECKBOXES/RADIOS.
     width: 45px;
     box-shadow: none;
 }
-
-.joomdev-wss-options-box input[type=radio]:checked:after,
-.joomdev-wss-options-box input[type=checkbox]:checked:after {
+.joomdev-wss-options-box input[type=radio]:checked:after, .joomdev-wss-options-box input[type=checkbox]:checked:after{
     color: #00b0ff;
     font-family: FontAwesome;
     content: "\f00c";
@@ -1772,47 +1768,28 @@ Button animation
 .joomdev-wss-animation-3 a .fa {
     vertical-align: middle;
     line-height: 40px;
+    background: #212121;
     left: 0px;
     width: 40px;
     position: absolute;
     font-size: 16px;
     font-weight: 400;
     transition: all 0.5s ease;
+    border-radius: 4px 0 0 4px;
     text-align: center;
 }
 
-/* Safari 4.0 - 8.0 */
-
-@-webkit-keyframes rotateIcon {
-    0% {
-        transform: rotate(0) scale(1);
-    }
-    50% {
-        transform: rotate(180deg) scale(1.7);
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
-    }
+.joomdev-wss-animation-3 a .fa:after {
+    content: "";
+    border: 8px solid;
+    border-color: transparent transparent transparent #222;
+    position: absolute;
+    top: 13px;
+    right: -15px;
 }
 
-/* Standard syntax */
-
-@keyframes rotateIcon {
-    0% {
-        transform: rotate(0) scale(1);
-    }
-    50% {
-        transform: rotate(180deg) scale(1.7);
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
-    }
-}
-
-.joomdev-wss-animation-3:hover a .fa {
-    -moz-animation: rotateIcon 0.4s linear;
-    -webkit-animation: rotateIcon 0.4s linear;
-    animation: rotateIcon 0.4s linear;
+.joomdev-wss-animation-3:hover a span {
+    margin-left: 65px;
 }
 
 .joomdev-wss-animation-3 a.facebook {

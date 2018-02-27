@@ -352,7 +352,7 @@ function joomdev_wss_generate_share_buttons_top_of_content($content){
 						$meta_value = $meta_value + $joomdev_wss_options['default_share_count'];
 						?>
             <div class="joomdev-wss-share-count-total">
-                <?php echo $meta_value; ?>
+                <?php echo $meta_value; ?> Shares
             </div>
             <?php 
 					}
@@ -430,7 +430,7 @@ function joomdev_wss_generate_share_buttons_bottom_of_content($content){
 						$meta_value = $meta_value + $joomdev_wss_options['default_share_count'];
 						?>
             <div class="joomdev-wss-share-count-total">
-                <?php echo $meta_value; ?>
+                <?php echo $meta_value; ?> Shares
             </div>
             <?php 
 					}
@@ -507,7 +507,7 @@ function joomdev_wss_generate_share_buttons_sidebar(){
 						$meta_value = $meta_value + $joomdev_wss_options['default_share_count'];
 						?>
                 <div class="joomdev-wss-share-count-total">
-                    <?php echo $meta_value; ?>
+                    <?php echo $meta_value; ?> Shares
                 </div>
                 <?php 
 					}
@@ -652,7 +652,7 @@ function joomdev_wss_generate_share_buttons_media(){
             <div class="joomdev-wss-social-share-buttons joomdev-wss-social-share-buttons-media">
                 <?php 
 						if($joomdev_wss_options['share_incentive']){
-							echo '<div class="joomdev-wss-social-share-incentive">'.$joomdev_wss_options['share_incentive'].'</div>';
+							// echo '<div class="joomdev-wss-social-share-incentive">'.$joomdev_wss_options['share_incentive'].'</div>';
 						}
 
 						if($joomdev_wss_options['show_share_count'] == 'yes'){
@@ -661,7 +661,7 @@ function joomdev_wss_generate_share_buttons_media(){
 							$meta_value = $meta_value + $joomdev_wss_options['default_share_count'];
 							?>
                 <div class="joomdev-wss-share-count-total">
-                    <?php echo $meta_value; ?>
+                    <?php echo $meta_value; ?> Shares
                 </div>
                 <?php 
 						}

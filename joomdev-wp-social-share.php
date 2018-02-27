@@ -530,12 +530,12 @@ function joomdev_wss_register_menu_page_callback(){
                         <div class="joomdev-form-field">
                             <label>
                                 <!-- <span>Show Share Incentive</span> -->
-                                <input type="checkbox" name="joomdev_wss_options[enable_share_incentive]" value="yes" <?php echo isset($joomdev_wss_options['enable_share_incentive']) && $joomdev_wss_options['enable_share_incentive'] == 'yes' ? 'checked' : ''; ?>>
+                                <input type="checkbox" id="enable_share_incentive" name="joomdev_wss_options[enable_share_incentive]" value="yes" <?php echo isset($joomdev_wss_options['enable_share_incentive']) && $joomdev_wss_options['enable_share_incentive'] == 'yes' ? 'checked' : ''; ?>>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div class="joomdev-wss-options-box-options-single-option">
+                <div class="joomdev-wss-options-box-options-single-option" style="display:<?php echo isset($joomdev_wss_options['enable_share_incentive']) && $joomdev_wss_options['enable_share_incentive'] == 'yes' ? 'block' : 'none'; ?>;">
                     <div class="joomdev-wss-options-box-sided first-cell">
                         <h3>Share Incentive</h3>
                         <small>If you use bottom share buttons, this text will be displayed before the buttons to motivate visitors clicks. E.g : Share this.</small>
