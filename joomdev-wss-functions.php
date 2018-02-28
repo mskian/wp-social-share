@@ -422,7 +422,7 @@ function joomdev_wss_generate_share_buttons_bottom_of_content($content){
         <div class="joomdev-wss-social-share-buttons joomdev-wss-social-share-buttons-bottom">
             <?php 
 					if($joomdev_wss_options['share_incentive'] && $joomdev_wss_options['enable_share_incentive'] == 'yes'){
-						echo '<div class="joomdev-wss-social-share-incentive">'.$joomdev_wss_options['share_incentive'].'</div>';
+						echo '<div class="joomdev-wss-social-share-incentive"><span>'.$joomdev_wss_options['share_incentive'].'</span></div>';
 					}
 
 					if($joomdev_wss_options['show_share_count'] == 'yes'){
