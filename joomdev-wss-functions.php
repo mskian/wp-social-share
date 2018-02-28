@@ -352,8 +352,9 @@ function joomdev_wss_generate_share_buttons_top_of_content($content){
 						$meta_value = $meta_value + $joomdev_wss_options['default_share_count'];
 						?>
             <div class="joomdev-wss-share-count-total">
-                <?php echo $meta_value; ?> Shares
+                <span class="jd-share-count"><?php echo $meta_value; ?></span><span class="jd-share-title">Shares</span>
             </div>
+            <div class="jd-clear-line"></div>
             <?php 
 					}
 				
@@ -430,8 +431,9 @@ function joomdev_wss_generate_share_buttons_bottom_of_content($content){
 						$meta_value = $meta_value + $joomdev_wss_options['default_share_count'];
 						?>
             <div class="joomdev-wss-share-count-total">
-                <?php echo $meta_value; ?> Shares
+                <span class="jd-share-count"><?php echo $meta_value; ?></span><span class="jd-share-title">Shares</span>
             </div>
+            <div class="jd-clear-line"></div>
             <?php 
 					}
 				
@@ -507,8 +509,9 @@ function joomdev_wss_generate_share_buttons_sidebar(){
 						$meta_value = $meta_value + $joomdev_wss_options['default_share_count'];
 						?>
                 <div class="joomdev-wss-share-count-total">
-                    <?php echo $meta_value; ?> Shares
+                    <span class="jd-share-count"><?php echo $meta_value; ?></span><span class="jd-share-title">Shares</span>
                 </div>
+                <div class="jd-clear-line"></div>
                 <?php 
 					}
 				
@@ -535,16 +538,16 @@ function joomdev_wss_generate_share_buttons_sidebar(){
 							$meta_name = 'joomdev_wss_' . $key . '_share_count';
 							$meta_value = (int)get_post_meta($post->ID, $meta_name, true);
 							?>
-				                <div class="joomdev-wss-share-count">
-				                    <?php echo $meta_value; ?>
-				                </div>
-			                <?php 
+                <div class="joomdev-wss-share-count">
+                    <?php echo $meta_value; ?>
+                </div>
+                <?php 
 						}*/
 						?>
-			                <a data-network="<?php echo $key; ?>" data-id="<?php echo $post->ID; ?>" class="joomdev-wss-popup <?php echo $classes; ?>" href="javascript:;" data-href="<?php echo $network_url; ?>">
-			                    <?php echo $button_label; ?>
-			                </a>
-		                <?php 
+                <a data-network="<?php echo $key; ?>" data-id="<?php echo $post->ID; ?>" class="joomdev-wss-popup <?php echo $classes; ?>" href="javascript:;" data-href="<?php echo $network_url; ?>">
+                    <?php echo $button_label; ?>
+                </a>
+                <?php 
 							echo '</div>';
 
 
@@ -557,7 +560,7 @@ function joomdev_wss_generate_share_buttons_sidebar(){
 					if($n >= 5){
 						echo '<div class="joomdev-wss-social-share-button joomdev-wss-social-share-'.$joomdev_wss_options['buttons_format'].'">';
 							?>
-				                <a data-network="more" data-id="more" class="joomdev-wss-popup-more <?php echo $class_more; ?>" href="javascript:;" data-href="javascript:;">
+                <a data-network="more" data-id="more" class="joomdev-wss-popup-more <?php echo $class_more; ?>" href="javascript:;" data-href="javascript:;">
 				                    <i class="fa fa-ellipsis-h"></i>
 				                    <?php 
 				                    	/*if($joomdev_wss_options['share_incentive']){
@@ -565,11 +568,11 @@ function joomdev_wss_generate_share_buttons_sidebar(){
 										}*/
 				                    ?>
 				                </a>
-			                <?php 
+                <?php 
 						echo '</div>';
 						?>
-							<div class="joomdev-wss-social-share-popup-more">
-								<?php 
+                <div class="joomdev-wss-social-share-popup-more">
+                    <?php 
 									$i = 0;
 									foreach ($selected_networks as $key => $value) {
 
@@ -594,15 +597,15 @@ function joomdev_wss_generate_share_buttons_sidebar(){
 
 										echo '<div class="joomdev-wss-social-share-button joomdev-wss-social-share-'.$joomdev_wss_options['buttons_format'].'">';
 										?>
-							                <a data-network="<?php echo $key; ?>" data-id="<?php echo $post->ID; ?>" class="joomdev-wss-popup <?php echo $classes; ?>" href="javascript:;" data-href="<?php echo $network_url; ?>">
-							                    <?php echo $button_label; ?>
-							                </a>
-						                <?php 
+                    <a data-network="<?php echo $key; ?>" data-id="<?php echo $post->ID; ?>" class="joomdev-wss-popup <?php echo $classes; ?>" href="javascript:;" data-href="<?php echo $network_url; ?>">
+                        <?php echo $button_label; ?>
+                    </a>
+                    <?php 
 											echo '</div>';
 									}
 								?>
-							</div>
-						<?php 
+                </div>
+                <?php 
 					}
 				?>
 
@@ -661,8 +664,9 @@ function joomdev_wss_generate_share_buttons_media(){
 							$meta_value = $meta_value + $joomdev_wss_options['default_share_count'];
 							?>
                 <div class="joomdev-wss-share-count-total">
-                    <?php echo $meta_value; ?> Shares
+                    <span class="jd-share-count"><?php echo $meta_value; ?></span><span class="jd-share-title">Shares</span>
                 </div>
+                <div class="jd-clear-line"></div>
                 <?php 
 						}
 					
