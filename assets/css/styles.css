@@ -1,19 +1,41 @@
-.joomdev-wss-social-share-incentive {
-    font-size: 18px;
-    line-height: 1.2;
-    margin: 0;
-    display: inline-block;
-}
-
-.joomdev-wss-social-share-incentive:before {
-    content: "\f1e0";
-    font-family: 'FontAwesome';
-    margin-right: 10px;
-}
-
 .joomdev-wss-social-share-buttons {
     display: block;
     width: 100%;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-social-share-incentive {
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 15px 0 5px;
+    display: block;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-share-count-total {
+    padding: 5px 0;
+    margin: 0 0 15px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-share-count-total .jd-share-count {
+    font-size: 27px;
+    line-height: 21px;
+    padding: 0;
+    color: #7cbf4b;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.joomdev-wss-social-share-buttons .joomdev-wss-share-count-total .jd-share-title {
+    padding: 5px 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    display: block;
 }
 
 .joomdev-wss-social-share-buttons .joomdev-wss-social-share-button {
@@ -295,17 +317,70 @@ Siderbar icon
     z-index: 99999999999;
 }
 
+.joomdev-wss-social-share-buttons-sidebar-inner-container,
+.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/*Share counter*/
+
+.joomdev-wss-social-share-buttons-sidebar-inner-container .joomdev-wss-share-count-total {
+    background: #fff;
+    color: #555;
+    display: inline-block;
+    font-weight: 500;
+    line-height: 18px;
+    margin-right: 0;
+    min-height: 34px;
+    opacity: 1;
+    padding: 4px 0;
+    text-align: center;
+    width: auto;
+    margin: 0 0 2px;
+}
+
+.joomdev-wss-social-share-buttons-sidebar-inner-container .joomdev-wss-share-count-total .jd-share-count {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0;
+    display: block;
+    color: #7cbf4b;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.joomdev-wss-social-share-buttons-sidebar-inner-container .joomdev-wss-share-count-total .jd-share-title {
+    padding: 0 5px;
+    display: block;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    color: #333;
+}
+
+/*end share counter*/
+
 .joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button {
     width: 50px;
     height: 45px;
-}
-
-.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button {
-    margin-bottom: 5px;
-}
-
-.joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button {
-    display: block;
+    margin: 0 0 2px;
 }
 
 .joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-button-text_and_icons {
@@ -709,7 +784,17 @@ More networks
 }
 
 @media (max-height: 320px) {
-
+    .joomdev-wss-social-share-buttons-sidebar-inner-container .joomdev-wss-share-count-total {
+        margin: 0;
+    }
+    .joomdev-wss-social-share-buttons-sidebar-inner-container .joomdev-wss-share-count-total .jd-share-count {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .joomdev-wss-social-share-buttons-sidebar-inner-container .joomdev-wss-share-count-total .jd-share-title {
+        font-size: 10px;
+        line-height: 12px;
+    }
     .joomdev-wss-social-share-buttons.joomdev-wss-social-share-buttons-sidebar .joomdev-wss-social-share-button {
         width: 28px;
         height: 28px;
