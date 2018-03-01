@@ -1135,6 +1135,11 @@ MULTI SELECT ANIMATION
     overflow: hidden;
 }
 
+.joomdev-wss-multiselect-animation-horizontal > div a span {
+    display: inline-block;
+    padding-left: 10px;
+}
+
 .joomdev-wss-multiselect-animation-horizontal input[type="checkbox"],
 .joomdev-wss-multiselect-animation-horizontal input[type="radio"] {
     border: none;
@@ -1702,8 +1707,8 @@ Button animation
     font-weight: 600;
     border-radius: 4px;
     transition: all .5s ease;
-    text-align: center;
-    padding-left: 30px;
+    text-align: left;
+    padding-left: 55px;
 }
 
 .joomdev-wss-animation-2 a .fa {
@@ -1718,6 +1723,7 @@ Button animation
     font-weight: 400;
     transition: all 0.5s ease;
     border-radius: 4px 0 0 4px;
+    text-align: center;
 }
 
 .joomdev-wss-animation-2 a .fa:nth-child(2) {
@@ -1765,7 +1771,7 @@ Button animation
 }
 
 .joomdev-wss-animation-3 a span {
-    margin-left: 55px;
+    margin-left: 45px;
     transition: all 0.5s ease;
 }
 
@@ -1837,7 +1843,7 @@ Button animation
     height: 41px;
     font-weight: 600;
     border-radius: 4px;
-    text-align: center;
+    text-align: left;
     position: relative;
     transition: all .5s ease;
     overflow: hidden;
